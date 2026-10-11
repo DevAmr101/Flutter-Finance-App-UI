@@ -1,0 +1,57 @@
+import 'package:finance_ui/core/styling/app_colors.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+
+class BackButtonWidget extends StatelessWidget {
+  const BackButtonWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+
+    return 
+    
+    Align(
+              alignment: Alignment.centerLeft,
+
+                child: Container(
+                  
+                  width: 41.w,
+                  height: 41.h,
+                
+                  decoration: BoxDecoration(
+
+                    color: Colors.transparent,
+                    border: Border.all(color: Color(0xffe8ecf4), width: 1),
+                    borderRadius: BorderRadius.circular(16.r),
+                    
+                    ),
+                
+                    child: Center(
+                
+                      child: InkWell(
+
+                        onTap: () {
+                          
+                          GoRouter.of(context).pop();
+                        
+                        },
+
+                        child: Icon(
+                                        
+                          Icons.arrow_back,
+                          color: AppColors.primaryColor,
+                                        
+                          ),
+
+                      ),
+                
+                    ),
+                
+                ),
+
+              );
+
+  }
+
+}
